@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F976A5B19E3784A00DDB02B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F976A5A19E3784A00DDB02B /* FacebookSDK.framework */; };
 		1FC7CF2819DDC0EC00EEA690 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC7CF2719DDC0EC00EEA690 /* AppDelegate.swift */; };
 		1FC7CF2A19DDC0EC00EEA690 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC7CF2919DDC0EC00EEA690 /* ViewController.swift */; };
 		1FC7CF2D19DDC0EC00EEA690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC7CF2B19DDC0EC00EEA690 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F976A5A19E3784A00DDB02B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		1F976A5C19E37D3C00DDB02B /* LovinLetters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LovinLetters-Bridging-Header.h"; sourceTree = "<group>"; };
 		1FC7CF2219DDC0EC00EEA690 /* LovinLetters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovinLetters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC7CF2619DDC0EC00EEA690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC7CF2719DDC0EC00EEA690 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F976A5B19E3784A00DDB02B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 		1FC7CF1919DDC0EC00EEA690 = {
 			isa = PBXGroup;
 			children = (
+				1F976A5A19E3784A00DDB02B /* FacebookSDK.framework */,
 				1FC7CF2419DDC0EC00EEA690 /* LovinLetters */,
 				1FC7CF3A19DDC0EC00EEA690 /* LovinLettersTests */,
 				1FC7CF2319DDC0EC00EEA690 /* Products */,
@@ -83,6 +88,7 @@
 				1FC7CF2E19DDC0EC00EEA690 /* Images.xcassets */,
 				1FC7CF3019DDC0EC00EEA690 /* LaunchScreen.xib */,
 				1FC7CF2519DDC0EC00EEA690 /* Supporting Files */,
+				1F976A5C19E37D3C00DDB02B /* LovinLetters-Bridging-Header.h */,
 			);
 			path = LovinLetters;
 			sourceTree = "<group>";
@@ -336,9 +342,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Travis/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = LovinLetters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LovinLetters/LovinLetters-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +359,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Travis/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = LovinLetters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LovinLetters/LovinLetters-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +424,7 @@
 				1FC7CF4319DDC0EC00EEA690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FC7CF4419DDC0EC00EEA690 /* Build configuration list for PBXNativeTarget "LovinLettersTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +433,7 @@
 				1FC7CF4619DDC0EC00EEA690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
